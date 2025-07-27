@@ -7,10 +7,10 @@ from venn import venn
 st.title("🧬 Venn Diagram Generator")
 
 # Upload file
-table = st.file_uploader("Upload a CSV file", type="csv")
+url = "https://drive.google.com/uc?id=1nFASWE3AOn0FxVu1PB3Ik3cvPutV9U1S"
+df = pd.read_csv(url)
 
-if table is not None:
-    df = pd.read_csv(table)
+if df is not None:
 
     # Check if required column exists
     if 'High glucose' in df.columns:
